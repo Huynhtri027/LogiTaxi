@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+        android:id="@+id/back_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:drawableLeft="@drawable/ic_arrow_back_white_24dp"
+        android:drawablePadding="20dp"
+        android:drawableTint="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="Update Location"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/back_button"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp">
+
+
+        <LinearLayout
+            android:id="@+id/search_bar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/search"
+                    android:layout_toStartOf="@+id/search">
+
+                    <EditText
+                        android:id="@+id/adressText"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="Enter Place Name"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/search"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/search_icon" />
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/searchResultLV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_bar_view"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"></ListView>
+
+        <TextView
+            android:id="@+id/or_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_bar_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:text="OR"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/my_location"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/or_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@color/black"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Get My Location"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/circle_progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:visibility="invisible"
+            app:mlpb_enable_circle_background="true"
+            app:mlpb_progress_color="@color/colorAccent"
+            app:mlpb_progress_stoke_width="3dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

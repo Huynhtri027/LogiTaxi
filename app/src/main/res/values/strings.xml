@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TRAVEL PROFILE</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="loation_key">AIzaSyDodcR0EBSkjMH8asoHoSU0vAqPqcoxsow</string>
+    <string name="Rs">\u20B9</string>
+    <array name="package_type">
+        <item>Select Package Type</item>
+        <item>Handy Gadget</item>
+        <item>Cloth Package</item>
+        <item>Documents/Books</item>
+        <item>Groceries</item>
+        <item>Electronic Item</item>
+    </array>
+    <string name="gcm_defaultSenderId" translatable="false">445323648967</string>
+</resources>
